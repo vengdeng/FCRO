@@ -221,9 +221,7 @@ class FCROTrainer:
                 input = input.cuda()
 
                 logits, _ = self.model_a(input)
-                pred = torch.sigmoid(logits)
-
-                preds = np.append(preds, pred.squeeze().cpu().numpy())
+                logits = torch.sigmoid(logits)
 
                 for i, sa in enumerate(self.args.sensitive_attributes):
                     a_dict[sa] = np.append(a_dict[sa], z[sa].squeeze().cpu().numpy())
