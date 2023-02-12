@@ -1,4 +1,3 @@
-import yaml
 import random
 import sys, os
 
@@ -15,7 +14,7 @@ from torch.utils.data import Dataset, DataLoader
 from numpy.random import shuffle
 
 from dataset import CheXpert
-from model.netowrk import Network
+from model.network import Network
 from trainer.FCRO_trainer import FCROTrainer
 import utils.util as util
 from utils.data_sampler import ClassBalanceSampler

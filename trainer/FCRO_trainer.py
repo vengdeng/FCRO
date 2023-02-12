@@ -257,7 +257,7 @@ class FCROTrainer:
         assert self.mode == 1, "Subspace is needed only when training target head."
 
         self.logger.info(
-            f"Building static subspace for sensitive representations on {len(dataloader.dataset)} samples."
+            f"-- Building static subspace for sensitive representations on {len(dataloader.dataset)} samples."
         )
 
         emb = []
@@ -284,6 +284,8 @@ class FCROTrainer:
             sval_ratio = (S**2) / (S**2).sum()
             r = (torch.cumsum(sval_ratio, -1) <= self.args.subspace_thre).sum()
             U_list.append(U[:, :r])
+
+        self.logger.info('-- Static subspace successfully built.')
 
         return U_list
 
