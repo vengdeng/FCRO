@@ -10,7 +10,7 @@ Wenlong Deng\*, Yuan Zhong\*, [Qi Dou](https://www.cse.cuhk.edu.hk/~qdou/), [Xia
 
 #### pip
 
-See the `requirement.txt` for more environment configurations.
+See `requirement.txt` for more environment configurations.
 
 ```bash
 pip install -r requirements.txt
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 We recommend setting up the environment via conda from exported `environment.yaml`.
 
 ```bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 conda activate fcro
 ```
 
